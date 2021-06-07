@@ -1,14 +1,8 @@
-package com.WinOrbooze.AutoDoctors.modle;
+package com.WinOrbooze.AutoDoctors.dto;
 
-import com.WinOrbooze.AutoDoctors.dto.UserDTO;
+import com.WinOrbooze.AutoDoctors.modle.User;
 
-import javax.persistence.*;
-
-@Entity
-@Table(name="user")
-public class User {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class UserDTO {
     private int id;
     private String username;
     private String password;
@@ -17,24 +11,16 @@ public class User {
     private String firstname;
     private String lastname;
 
-    public User(UserDTO userDTO){
-        this.id=userDTO.getId();
-        this.username=userDTO.getUsername();
-        this.password=userDTO.getPassword();
-        this.email=userDTO.getEmail();
-        this.address=userDTO.getAddress();
-        this.firstname=userDTO.getFirstname();
-        this.lastname=userDTO.getLastname();
+    public UserDTO() {
     }
-
-    public User(int id, String username, String password, String email, String address, String firstname, String lastname) {
-        this.id = id;
-        this.username = username;
-        this.password = password;
-        this.email = email;
-        this.address = address;
-        this.firstname = firstname;
-        this.lastname = lastname;
+    public UserDTO(User user){
+        this.id=user.getId();
+        this.username=user.getUsername();
+        this.password=user.getPassword();
+        this.email=user.getEmail();
+        this.address=user.getAddress();
+        this.firstname=user.getFirstname();
+        this.lastname=user.getLastname();
     }
 
     public int getId() {
@@ -93,5 +79,3 @@ public class User {
         this.lastname = lastname;
     }
 }
-
-
