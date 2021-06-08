@@ -78,4 +78,5 @@ public class UserDTO {
     public void setLastname(String lastname) {
         this.lastname = lastname;
     }
+
 }
