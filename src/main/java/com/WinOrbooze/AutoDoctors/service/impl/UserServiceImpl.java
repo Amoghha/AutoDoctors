@@ -4,19 +4,11 @@ import com.WinOrbooze.AutoDoctors.dto.UserDTO;
 import com.WinOrbooze.AutoDoctors.modle.User;
 import com.WinOrbooze.AutoDoctors.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Controller;
-import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RestController;
-import repository.UserRepository;
+import com.WinOrbooze.AutoDoctors.repository.UserRepository;
 
 import java.util.List;
 @Service
-@RestController
-@Repository
-@Component
 //@Configuration
 public class UserServiceImpl implements UserService {
 
